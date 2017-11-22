@@ -375,11 +375,11 @@ echo "<h1>Прайс лист на телевизоры:</h1>";
   ),
 );
 
-	$diagonals=[];
-	foreach($data as $index => $tv){
-		$diagonals[$index] = substr($tv ['description'], 0, 2);
-	}
-	arsort($diagonals);
+$diagonals=[];
+foreach($data as $index => $tv){
+	$diagonals[$index] = substr($tv ['description'], 0, 2);
+}
+arsort($diagonals);
 
 foreach($diagonals as $index => $diagonal){
 	foreach ($data as $tvindex => $tv){
@@ -390,7 +390,7 @@ foreach($diagonals as $index => $diagonal){
 			echo '</div>';
 			echo "<h2><b> Основные характеристики: </b></h2>". 
 			"<p>". 'Марка телевизора: '  .htmlspecialchars ($tv['name']). 
-			"<p>".'Идентификатор модели: '. htmlspecialchars ($tv['id']). 
+			"<p>".'Идентификатор модели: '.htmlspecialchars ($tv['id']). 
 			"<p>".'Рейтинг: ' .htmlspecialchars($tv['rating']).
 			"<p>". 'Описание: ' .htmlspecialchars ($tv['description']).
 			"<p>" .' Идентификатор категории: ' .htmlspecialchars( $tv['categoryId']). 
