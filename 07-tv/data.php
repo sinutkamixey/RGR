@@ -384,24 +384,24 @@ echo "<h1>Прайс лист на телевизоры:</h1>";
 foreach($diagonals as $index => $diagonal){
 	foreach ($data as $tvindex => $tv){
 		if($index==$tvindex){
-		echo '<div class="data">';
-		echo '<div class="img">';
-		echo '<img src="'.htmlspecialchars($tv['mainPhoto']['url']).'" width="280">';	
-		echo '</div>';
-		echo "<h2><b> Основные характеристики: </b></h2>". 
-		"<p>". 'Марка телевизора: '  .htmlspecialchars ($tv['name']). 
-		"<p>".'Идентификатор модели: '. htmlspecialchars ($tv['id']). 
-		"<p>".'Рейтинг: ' .htmlspecialchars($tv['rating']).
-		"<p>". 'Описание: ' .htmlspecialchars ($tv['description']).
-		"<p>" .' Идентификатор категории: ' .htmlspecialchars( $tv['categoryId']). 
-		"<p>". 'Цена: '.number_format($tv['prices']['amount'],2,',',' '). " ".htmlspecialchars( $tv['prices']['curCode']).
-		"<p>". 'Поставщик: '.htmlspecialchars ($tv['vendor']).
-		"<p>".' Код поставщика: '.htmlspecialchars( $tv['vendorId'] ).
-		"<p>" .'Количество: '.htmlspecialchars( $tv['gradeCount']).
-		"<p> Ссылка на yandex market:" .'<a href='.htmlspecialchars($tv['link'])."'>";
-		echo htmlspecialchars($tv['link']);
-		echo "</a>";
-		echo '</div>' ;
+			echo '<div class="data">';
+			echo '<div class="img">';
+			echo '<img src="'.htmlspecialchars($tv['mainPhoto']['url']).'" width="280">';	
+			echo '</div>';
+			echo "<h2><b> Основные характеристики: </b></h2>". 
+			"<p>". 'Марка телевизора: '  .htmlspecialchars ($tv['name']). 
+			"<p>".'Идентификатор модели: '. htmlspecialchars ($tv['id']). 
+			"<p>".'Рейтинг: ' .htmlspecialchars($tv['rating']).
+			"<p>". 'Описание: ' .htmlspecialchars ($tv['description']).
+			"<p>" .' Идентификатор категории: ' .htmlspecialchars( $tv['categoryId']). 
+			"<p>". 'Цена: '.number_format($tv['prices']['amount'],2,',',' '). " ".htmlspecialchars( $tv['prices']['curCode']).
+			"<p>". 'Поставщик: '.htmlspecialchars ($tv['vendor']).
+			"<p>".' Код поставщика: '.htmlspecialchars( $tv['vendorId'] ).
+			"<p>" .'Количество: '.htmlspecialchars( $tv['gradeCount']).
+			"<p> Ссылка на yandex market:" .'<a href='.htmlspecialchars($tv['link'])."'>";
+			echo htmlspecialchars($tv['link']);
+			echo "</a>";
+			echo '</div>' ;
 		}
 	}
 }
